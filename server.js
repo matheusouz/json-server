@@ -15,15 +15,21 @@ server.get('/echo', (req, res) => {
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser)
 server.use((req, res, next) => {
-  next()
+  accessToken = req.header('asaas-access-token') 
+    
+  if (accessToken == "12345") {
+    next()
+  } else {
+    res.sendStatus(401)
+  }
 })
 
 router.render = (req, res) => {
-    res.sendStatus(500)
+    // res.sendStatus(500)
 
-    // res.status(200).jsonp({
-    //     status: 'APPROVED'
-    // })
+    res.status(200).jsonp({
+        status: 'APPROVED'
+    })
 }
 
 // Use default router
