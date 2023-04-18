@@ -15,9 +15,10 @@ server.get('/echo', (req, res) => {
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser)
 server.use((req, res, next) => {
-  accessToken = req.header('asaas-access-token') 
-    
-  if (accessToken == "12345") {
+  next()
+  return
+
+  if (accessToken == "123456") {
     next()
   } else {
     res.sendStatus(401)
