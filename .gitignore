@@ -1,2 +1,5 @@
 **/node_modules
 package-lock.json
+.idea/.idea.json-server.dir/.idea/indexLayout.xml
+.gitignore
+.idea/.idea.json-server.dir/.idea/vcs.xml
