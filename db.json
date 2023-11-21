@@ -8,5 +8,6 @@
     "bill": [],
     "account-status": [],
     "invoice": [],
-    "external-authorization": []
+    "external-authorization": [],
+    "pix": []
 }
